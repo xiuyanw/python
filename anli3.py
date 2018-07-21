@@ -1,19 +1,33 @@
-import randpass2
-import subprocess
+import time
 import sys
-def add_user(username,password,fname):
-    data="""user infomation:
-%s:%s
-    """
-    subprocess.call('useradd %s' % username,shell=True)
-    subprocess.call(
-        'echo %s | passwd --stdin %s' % (password,username),
-        shell=True
-    )
-    with open(fname,'a') as fobj:
-        fobj.write(data % (username,password))
 
-if __name__=='__main__':
-    username=sys.argv[1]
-    password= randpass2.gen_pass()
-    add_user(username,password,'/tmp/user.txt')
+# length=19
+# count=1
+# while True:
+#     print('\r%s@%s' % ('#' * (count-1),'#' * (length-count)),end='')
+#
+#     time.sleep(0.3)
+#     if count==length:
+#         count=0
+#     count+=1
+
+
+
+length1=30
+count1=1
+
+while True:
+
+        print('\r%s@%s'%('*'*(count1-1), '#' *(length1-count1)),end='')
+        try:
+            time.sleep(0.1)
+        except KeyboardInterrupt:
+            print("\nBye-bye")
+            break
+        if count1==length1:
+            count1=0
+        count1+=1
+
+
+
+
