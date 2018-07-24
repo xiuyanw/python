@@ -1,7 +1,6 @@
 import random
 def add(func):
     def paixu(alist=func()):
-
         if len(alist)<2:
             return alist
         midlle=alist[0]
