@@ -7,4 +7,4 @@ session=Session()
 
 session.add_all([zhangsan,lisi])
 session.commit()
-session.commit()
+session.close()
